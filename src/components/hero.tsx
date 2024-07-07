@@ -2,63 +2,9 @@ import { BackgroundBeams } from "./ui/background-beams";
 
 const Hero = () => {
   return (
-    <div className="h-screen">
-      {/* <BackgroundBeams /> */}
-      <div className="container bg-rose-500">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
-      <div className="container">Slaw</div>
+    <div className="h-[calc(100vh-56px)]">
+      <BackgroundBeams />
+      <div className="container mt-14">Slaw</div>
     </div>
   );
 };
