@@ -81,7 +81,7 @@ const Navbar = () => {
                     <Link
                       href={nav.link}
                       className={`font-medium ${
-                        pathName === nav.link ? "text-[#DC143C]" : ""
+                        pathName === nav.link ? "text-pbg-purple-500" : ""
                       }`}
                     >
                       {nav.name}
@@ -106,7 +106,7 @@ const Navbar = () => {
                       initial={{
                         y: "0px",
                       }}
-                      className="absolute -bottom-1 transform -translate-x-1/2 bg-[#DC143C]  w-full h-[2px] rounded-full "
+                      className="absolute -bottom-1 transform -translate-x-1/2 bg-purple-500  w-full h-[2px] rounded-full "
                       layoutId="red-dot"
                     />
                   )}
