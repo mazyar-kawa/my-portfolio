@@ -1,4 +1,6 @@
 import "@/styles/globals.css";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export default function RootLayout({
   children,
@@ -7,7 +9,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-black-100 text-white">{children}</body>
+      <Suspense fallback={<Loading />}>
+        <body className="bg-black-100 text-white">{children}</body>
+      </Suspense>
     </html>
   );
 }

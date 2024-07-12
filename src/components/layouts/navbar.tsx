@@ -45,7 +45,7 @@ const Navbar = () => {
   const pathName = usePathname();
   const [isActive, setIsActive] = useState(false);
   return (
-    <div className="fixed w-full top-0 left-0">
+    <div className="fixed z-50 w-full top-0 left-0">
       <div className="flex w-full justify-between md:py-4 py-2 container  bg-black-100/40 backdrop-blur-md">
         {/* logo */}
         <div>logo</div>
