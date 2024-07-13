@@ -5,8 +5,8 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Hero = () => {
   return (
-    <div>
-      <BackgroundBeams />
+    <div className="relative">
+      <BackgroundBeams className="absolute" />
       <div className="container flex flex-col md:flex-row justify-end md:justify-between gap-4 items-center max-w-5xl h-[calc(100vh-50px)] md:h-[calc(100vh-44px)] overflow-hidden mt-12 md:mt-14">
         <div className="gap-4 md:basis-1/2 flex flex-col items-center md:items-start">
           <div className="text-purple-500 flex flex-col">

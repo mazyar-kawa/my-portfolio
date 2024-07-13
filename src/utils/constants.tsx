@@ -8,8 +8,9 @@ export const MyProjects = [
       {
         id: 1,
         name: "flutter",
+        image: "/flutter.svg",
       },
-      { id: 2, name: "laravel" },
+      { id: 2, name: "laravel", image: "/laravel.svg" },
     ],
   },
   {
@@ -18,8 +19,8 @@ export const MyProjects = [
     description:
       "Encryption and decryption services using four methods, along with a password strength checker and generator.",
     tools: [
-      { id: 1, name: "flutter" },
-      { id: 2, name: "firebase" },
+      { id: 1, name: "flutter", image: "/flutter.svg" },
+      { id: 2, name: "firebase", image: "/firebase.svg" },
     ],
   },
   {
@@ -28,8 +29,8 @@ export const MyProjects = [
     description:
       "Provides accurate prayer times along with biographical information about Prophet Muhammad and the names of God.",
     tools: [
-      { id: 1, name: "flutter" },
-      { id: 2, name: "firebase" },
+      { id: 1, name: "flutter", image: "/flutter.svg" },
+      { id: 2, name: "firebase", image: "/firebase.svg" },
     ],
   },
   {
@@ -38,11 +39,10 @@ export const MyProjects = [
     description:
       "Purchasing cosmetics while also providing detailed insights into various brands and expert tips on their usage.",
     tools: [
-      { id: 1, name: "html" },
-      { id: 2, name: "js" },
-      { id: 3, name: "vue" },
-      { id: 4, name: "tailwind" },
-      { id: 5, name: "laravel" },
+      { id: 1, name: "html", image: "/html.svg" },
+      { id: 2, name: "vue js", image: "/vue.svg" },
+      { id: 3, name: "tailwind css", image: "/tailwind.svg" },
+      { id: 4, name: "laravel", image: "/laravel.svg" },
     ],
   },
 ];

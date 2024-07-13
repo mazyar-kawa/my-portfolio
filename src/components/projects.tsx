@@ -1,9 +1,13 @@
 import { PinContainer } from "./ui/3d-pin";
 import { MyProjects } from "@/utils/constants";
+import { AnimatedTooltip } from "./ui/animated-tooltip";
 
 const Projects = () => {
   return (
-    <div className="flex flex-col items-center container py-10 relative">
+    <div
+      className="flex flex-col items-center container py-10 relative"
+      id="projects"
+    >
       <h1 className="md:text-5xl text-purple-500 font-extrabold">
         Recent Projects
       </h1>
@@ -17,10 +21,13 @@ const Projects = () => {
               <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
                 <div className="flex flex-1 w-full rounded-lg mb-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
 
-                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-xl text-slate-100">
                   {project.title}
                 </h3>
                 <p className="text-slate-500 text-sm">{project.description}</p>
+                <div className="flex flex-row items-center mt-2">
+                  <AnimatedTooltip items={project.tools} />
+                </div>
               </div>
             </PinContainer>
           </div>
