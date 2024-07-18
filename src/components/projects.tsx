@@ -1,6 +1,5 @@
-import { PinContainer } from "./ui/3d-pin";
 import { MyProjects } from "@/utils/constants";
-import { AnimatedTooltip } from "./ui/animated-tooltip";
+import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 
 const Projects = () => {
   return (
@@ -8,10 +7,21 @@ const Projects = () => {
       className="flex flex-col items-center container py-10 relative"
       id="projects"
     >
-      <h1 className="md:text-5xl text-purple-500 font-extrabold">
+      <h1 className="md:text-5xl text-blue-500 font-extrabold">
         Recent Projects
       </h1>
-      <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 w-full ">
+      <BentoGrid>
+        {MyProjects.map((project) => (
+          <BentoGridItem
+            className="h-[23rem] w-full z-20"
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            tools={project.tools}
+          />
+        ))}
+      </BentoGrid>
+      {/* <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 w-full">
         {MyProjects.map((project) => (
           <div
             key={project.id}
@@ -32,7 +42,7 @@ const Projects = () => {
             </PinContainer>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

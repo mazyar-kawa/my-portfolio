@@ -10,7 +10,7 @@ const menuItems = [
   { name: "Home", link: "#home" },
   { name: "Projects", link: "#projects" },
   { name: "Services", link: "#services" },
-  { name: "Skills", link: "#skills" },
+  { name: "Skills", link: "#my-skills" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -51,9 +51,7 @@ const Navbar = () => {
     <li className="relative flex items-center justify-center">
       <Link
         href={link}
-        className={`font-medium ${
-          activeLink === link ? "text-purple-500" : ""
-        }`}
+        className={`font-medium ${activeLink === link ? "text-blue-500" : ""}`}
         onClick={() => setActiveLink(link)}
       >
         {name}
@@ -61,7 +59,7 @@ const Navbar = () => {
       {activeLink === link && (
         <motion.div
           initial={{ y: "0px" }}
-          className="absolute -bottom-1 transform -translate-x-1/2 bg-purple-500 w-full h-[2px] rounded-full"
+          className="absolute -bottom-1 transform -translate-x-1/2 bg-blue-500 w-full h-[2px] rounded-full"
           layoutId="underline"
         />
       )}
@@ -74,7 +72,7 @@ const Navbar = () => {
         {/* logo */}
         <div>
           <h1 className="text-xl font-extrabold">
-            <span className="text-purple-500 transform rotate-12 inline-block">
+            <span className="text-blue-500 transform rotate-12 inline-block">
               M
             </span>
             k
