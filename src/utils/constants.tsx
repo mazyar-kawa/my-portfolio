@@ -2,6 +2,7 @@ export const MyProjects = [
   {
     id: 1,
     title: "Jewelry Quest",
+    image: "/jewlery.png",
     description:
       "Discover and purchase exquisite gold, silver, and lira jewelry with ease. This robust and modern app offers an intuitive user experience.",
     tools: [
@@ -15,7 +16,8 @@ export const MyProjects = [
   },
   {
     id: 2,
-    title: "Multi Cipher",
+    title: "Multi Cypher",
+    image: "/multi-cypher.png",
     description:
       "Encryption and decryption services using four methods, along with a password strength checker and generator.",
     tools: [
@@ -26,6 +28,7 @@ export const MyProjects = [
   {
     id: 3,
     title: "Pray Time",
+    image: "/pray-time.png",
     description:
       "Provides accurate prayer times along with biographical information about Prophet Muhammad and the names of God.",
     tools: [
@@ -36,6 +39,7 @@ export const MyProjects = [
   {
     id: 4,
     title: "Piano Beauty",
+    image: "/piano-beauty.png",
     description:
       "Purchasing cosmetics while also providing detailed insights into various brands and expert tips on their usage.",
     tools: [
@@ -160,5 +164,20 @@ export const MySkills = [
     name: "Spring boot",
     description:
       "A Java-based framework used to create stand-alone, production-grade Spring-based applications.",
+  },
+];
+
+export const MyContact = [
+  {
+    icon: "/facebook.svg",
+    link: "https://m.facebook.com/mrmazyar",
+  },
+  {
+    icon: "/github.svg",
+    link: "https://github.com/mazyar-kawa",
+  },
+  {
+    icon: "/linkedin.svg",
+    link: "https://www.linkedin.com/in/mazyar-kawa-b0aa3921b",
   },
 ];

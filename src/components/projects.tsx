@@ -4,7 +4,7 @@ import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 const Projects = () => {
   return (
     <div
-      className="flex flex-col items-center container py-10 relative"
+      className="flex flex-col items-center container py-5 gap-6 relative"
       id="projects"
     >
       <h1 className="md:text-5xl text-blue-500 font-extrabold">
@@ -16,6 +16,7 @@ const Projects = () => {
             className="h-[23rem] w-full z-20"
             key={project.id}
             title={project.title}
+            image={project.image}
             description={project.description}
             tools={project.tools}
           />

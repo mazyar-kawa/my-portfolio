@@ -1,3 +1,4 @@
+import Contact from "@/components/contact";
 import Hero from "@/components/hero";
 import MySkils from "@/components/my-skils";
 import Projects from "@/components/projects";
@@ -10,6 +11,7 @@ export default function Home() {
       <Projects />
       <Services />
       <MySkils />
+      <Contact />
     </div>
   );
 }

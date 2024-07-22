@@ -71,7 +71,7 @@ const Navbar = () => {
       <div className="flex w-full justify-between md:py-4 py-2 container bg-opacity-40 bg-black-100 backdrop-blur-md">
         {/* logo */}
         <div>
-          <h1 className="text-xl font-extrabold">
+          <h1 className="text-2xl font-extrabold">
             <span className="text-blue-500 transform rotate-12 inline-block">
               M
             </span>
@@ -88,7 +88,7 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute pr-6 pl-2 rounded-md border border-white py-1 top-14 right-8 md:hidden"
+            className="absolute pr-6 pl-2 rounded-md bg-opacity-75 bg-black-100 backdrop-blur-md border border-white py-1 top-14 right-8 md:hidden"
           >
             <ul className="flex flex-col items-start space-y-2">
               {menuItems.map((nav) => (

@@ -1,6 +1,7 @@
 import { cn } from "@/utils/cn";
 import React from "react";
 import { AnimatedTooltip } from "./animated-tooltip";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -25,11 +26,13 @@ export const BentoGridItem = ({
   className,
   title,
   description,
+  image,
   tools,
 }: {
   className?: string;
   title?: string;
   description?: string;
+  image?: string;
   tools: { id: number; name: string; image: string }[];
 }) => {
   return (
@@ -39,7 +42,15 @@ export const BentoGridItem = ({
         className
       )}
     >
-      <div className="flex flex-1 w-full rounded-lg mb-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
+      <div className="flex flex-1 w-full rounded-lg mb-4 h-[10rem]">
+        <Image
+          alt="project picture"
+          src={`${image}`}
+          width={400}
+          height={400}
+          className="h-full rounded-lg"
+        />
+      </div>
       <div className="group-hover/bento:translate-x-2 transition duration-200">
         <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-xl text-slate-100">
           {title}
