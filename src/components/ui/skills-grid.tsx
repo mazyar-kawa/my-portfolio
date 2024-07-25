@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function SkillCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-6xl w-full mx-auto">
+    <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-6xl w-full mx-auto">
       {MySkills.map((feature, index) => (
         <Card key={feature.name} {...feature} index={index} />
       ))}
@@ -27,13 +27,13 @@ const Card = ({
   return (
     <div
       className={cn(
-        "flex flex-col lg:border-r  py-10 relative group/feature border-slate-800",
+        "flex flex-col lg:border-r  py-10 relative group/feature border-slate-800 cursor-pointer",
         (index === 0 || index === 4 || index === 8 || index === 12) &&
           "lg:border-l border-slate-800",
         (index < 4 || index < 8 || index < 12) && "lg:border-b border-slate-800"
       )}
     >
-      <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-blue-500/20 to-75% to-transparent pointer-events-none" />
+      <div className="opacity-0  group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-blue-500/20 to-75% to-transparent pointer-events-none" />
       <div className="mb-4 relative z-10 px-10  text-neutral-400">
         <div>
           <Image

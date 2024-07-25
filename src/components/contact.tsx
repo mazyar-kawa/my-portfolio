@@ -1,22 +1,25 @@
 import { MyContact } from "@/utils/constants";
 import Image from "next/image";
+import { Spotlight } from "./ui/Spotlight";
 
 const Contact = () => {
   return (
-    <div className="border-t border-slate-800">
-      <div className="flex items-center lg:items-start flex-col gap-4 py-5 max-w-6xl mx-auto">
+    <div className="relative">
+      <Spotlight fill="blue" className="absolute right-48 " />
+      <div className="flex items-center lg:items-start flex-col gap-4 py-10 max-w-6xl mx-auto">
         <h1 className="text-3xl text-blue-500 font-bold">
           Professional Profile
         </h1>
         <div className="px-6 space-y-4 max-w-2xl">
           <p>
-            As an experienced expert in the industry, I excel at transforming
+            I. As an experienced expert in the industry, I excel at transforming
             initial ideas into effective and user-friendly digital solutions.
             Elevate Your Business with Advanced Technological Solutions!
           </p>
           <p>
-            I am always open to exploring new opportunities and collaborations.
-            Feel free to contact me to discuss how we can work together.
+            II. I am always open to exploring new opportunities and
+            collaborations. Feel free to contact me to discuss how we can work
+            together.
           </p>
         </div>
       </div>

@@ -7,9 +7,10 @@ interface CardProps {
   title: string;
   children?: React.ReactNode;
   description?: string;
+  index: number;
 }
 
-const Card = ({ title, children, description }: CardProps) => {
+const Card = ({ title, children, description, index }: CardProps) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -32,7 +33,7 @@ const Card = ({ title, children, description }: CardProps) => {
       </AnimatePresence>
       {!hovered && (
         <p className="text-center text-2xl font-bold absolute group-hover/canvas-card:-translate-y-4 group-hover/canvas-card:opacity-0 transition duration-200 w-full mx-auto flex items-center justify-center">
-          <span className="text-blue-500 mr-2">Hover</span> me
+          <span className="text-blue-500 mr-2">Service</span> {index}
         </p>
       )}
       <div className="relative z-20">

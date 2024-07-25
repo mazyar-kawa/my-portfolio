@@ -1,6 +1,6 @@
 import Contact from "@/components/contact";
 import Hero from "@/components/hero";
-import MySkils from "@/components/my-skils";
+import MySkils from "@/components/my-skills";
 import Projects from "@/components/projects";
 import Services from "@/components/services";
 
