@@ -181,3 +181,16 @@ export const MyContact = [
     link: "https://www.linkedin.com/in/mazyar-kawa-b0aa3921b",
   },
 ];
+
+export const ProfessionalPersonal = [
+  {
+    id: 1,
+    designation:
+      "As an experienced expert in the industry, I excel at transforming initial ideas into effective and user-friendly digital solutions.Elevate Your Business with Advanced Technological Solutions!",
+  },
+  {
+    id: 2,
+    designation:
+      "I am always open to exploring new opportunities and collaborations. Feel free to contact me to discuss how we can work together.",
+  },
+];

@@ -1,6 +1,6 @@
+import Footer from "@/components/layouts/footer";
 import Navbar from "@/components/layouts/navbar";
 import "@/styles/globals.css";
-import { Metadata } from "next";
 
 export default function MainLayout({
   children,
@@ -11,6 +11,7 @@ export default function MainLayout({
     <main className="relative">
       <Navbar />
       {children}
+      <Footer />
     </main>
   );
 }

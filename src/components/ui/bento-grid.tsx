@@ -2,22 +2,26 @@ import { cn } from "@/utils/cn";
 import React from "react";
 import { AnimatedTooltip } from "./animated-tooltip";
 import Image from "next/image";
+import { MyProjects } from "@/utils/constants";
 
-export const BentoGrid = ({
-  className,
-  children,
-}: {
-  className?: string;
-  children?: React.ReactNode;
-}) => {
+export const ProjectBentoGrid = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 w-full gap-10 max-w-6xl my-4",
+        "grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 w-full gap-10 max-w-6xl my-4",
         className
       )}
     >
-      {children}
+      {MyProjects.map((project) => (
+        <BentoGridItem
+          className="w-full z-20"
+          key={project.id}
+          title={project.title}
+          image={project.image}
+          description={project.description}
+          tools={project.tools}
+        />
+      ))}
     </div>
   );
 };

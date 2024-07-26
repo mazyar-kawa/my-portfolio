@@ -1,61 +1,42 @@
-import { MyContact } from "@/utils/constants";
-import Image from "next/image";
-import { Spotlight } from "./ui/Spotlight";
+import { ProfessionalPersonal } from "@/utils/constants";
+import { IconBrandTinder } from "@tabler/icons-react";
 
 const Contact = () => {
   return (
-    <div className="relative">
-      <Spotlight fill="blue" className="absolute right-48 " />
-      <div className="flex items-center lg:items-start flex-col gap-4 py-10 max-w-6xl mx-auto">
-        <h1 className="text-3xl text-blue-500 font-bold">
+    <div className="relative" id="contact">
+      <div className="flex flex-col gap-4 max-w-5xl container items-center">
+        <h1 className="text-3xl md:text-5xl text-blue-500 font-bold text-center">
           Professional Profile
         </h1>
-        <div className="px-6 space-y-4 max-w-2xl">
-          <p>
-            I. As an experienced expert in the industry, I excel at transforming
-            initial ideas into effective and user-friendly digital solutions.
-            Elevate Your Business with Advanced Technological Solutions!
-          </p>
-          <p>
-            II. I am always open to exploring new opportunities and
-            collaborations. Feel free to contact me to discuss how we can work
-            together.
-          </p>
+        <div className="grid sm:grid-cols-2 sm:gap-12 gap-4 place-content-center place-items-center">
+          {ProfessionalPersonal.map((profile) => (
+            <div
+              key={profile.id}
+              className="bg-gradient-to-br from-40% from-transparent to-blue-600/20 my-4 h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-slate-800 shadow-black/[0.1] mx-2 dark:shadow-white/[0.05] flex flex-col justify-between"
+            >
+              <p className="text-neutral-400 font-normal dark:text-neutral-200">
+                {profile.designation}
+              </p>
+              <div className="self-end">
+                <IconBrandTinder fill="#3B82F6" color="#3B82F6" />
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-
-      <div className="border-t border-slate-800  px-4 py-4 mx-auto  backdrop-blur-md">
-        <div className="flex justify-between items-center max-w-6xl mx-auto">
-          <div className="flex gap-4 items-center">
-            <a href="/">
-              <h1 className="text-lg md:text-4xl font-extrabold">
-                <span className="text-blue-500 transform rotate-12 inline-block">
-                  M
-                </span>
-                k
-              </h1>
-            </a>
-            <p>© 2024 All rights reserved.</p>
-          </div>
-          <div className="flex gap-2 md:flex-row">
-            {MyContact.map((contact) => (
-              <a
-                href={contact.link}
-                key={contact.icon}
-                className="border border-white rounded-full size-6 md:size-8 items-center flex justify-center"
-                target="_blank"
-              >
-                <Image
-                  alt="contacts icon"
-                  src={contact.icon}
-                  width={400}
-                  height={400}
-                  className="size-4 md:size-6"
-                />
-              </a>
-            ))}
-          </div>
-        </div>
+        {/* <CardStack
+          items={[
+            {
+              id: 1,
+              designation:
+                "As an experienced expert in the industry, I excel at transforming initial ideas into effective and user-friendly digital solutions.Elevate Your Business with Advanced Technological Solutions!",
+            },
+            {
+              id: 2,
+              designation:
+                "I am always open to exploring new opportunities and collaborations. Feel free to contact me to discuss how we can work together.",
+            },
+          ]}
+        /> */}
       </div>
     </div>
   );
