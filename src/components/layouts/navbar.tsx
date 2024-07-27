@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, useCallback } from "react";
 import HamburgerButton from "./hamburger-button";
+import useActiveLink from "@/utils/lib/hooks/use-active-link";
 
 const menuItems = [
   { name: "Home", link: "#home" },
@@ -23,7 +24,8 @@ const menuVariants = {
 const Navbar = () => {
   const pathName = usePathname();
   const [isActive, setIsActive] = useState(false);
-  const [activeLink, setActiveLink] = useState("#home");
+  const activeLink = useActiveLink((state) => state.activeLink);
+  const setActiveLink = useActiveLink((state) => state.setActiveLink);
 
   const handleHashChange = useCallback(() => {
     const hash = window.location.hash;
@@ -47,27 +49,8 @@ const Navbar = () => {
     };
   }, [handleHashChange]);
 
-  const MenuItem = ({ name, link }: { name: string; link: string }) => (
-    <li className="relative flex items-center justify-center">
-      <Link
-        href={link}
-        className={`font-medium ${activeLink === link ? "text-blue-500" : ""}`}
-        onClick={() => setActiveLink(link)}
-      >
-        {name}
-      </Link>
-      {activeLink === link && (
-        <motion.div
-          initial={{ y: "0px" }}
-          className="absolute -bottom-1 transform -translate-x-1/2 bg-blue-500 w-full h-[2px] rounded-full"
-          layoutId="underline"
-        />
-      )}
-    </li>
-  );
-
   return (
-    <div className="fixed z-50 w-full top-0 left-0">
+    <header className="fixed z-50 w-full top-0 left-0">
       <div className="flex w-full justify-between md:py-4 py-2 container bg-opacity-40 bg-black-100 backdrop-blur-md">
         {/* logo */}
         <div>
@@ -88,11 +71,20 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute pr-6 pl-2 rounded-md bg-opacity-75 bg-black-100 backdrop-blur-md border border-white py-1 top-14 right-8 md:hidden"
+            className="absolute pr-6 pl-2 rounded-md bg-black-100 border border-white py-1 top-14 right-8 md:hidden"
           >
             <ul className="flex flex-col items-start space-y-2">
               {menuItems.map((nav) => (
-                <MenuItem key={nav.link} name={nav.name} link={nav.link} />
+                <li key={nav.link} onClick={() => setActiveLink(nav.link)}>
+                  <Link
+                    href={nav.link}
+                    className={`font-medium ${
+                      activeLink === nav.link ? "text-blue-500 underline" : ""
+                    }`}
+                  >
+                    {nav.name}
+                  </Link>
+                </li>
               ))}
             </ul>
           </motion.div>
@@ -102,13 +94,30 @@ const Navbar = () => {
         <div className="hidden md:block">
           <ul className="space-x-8 md:flex">
             {menuItems.map((nav) => (
-              <MenuItem key={nav.link} name={nav.name} link={nav.link} />
+              <li
+                key={nav.link}
+                className="relative flex items-center justify-center"
+                onClick={() => setActiveLink(nav.link)}
+              >
+                {activeLink === nav.link && (
+                  <motion.div
+                    initial={{
+                      y: "0px",
+                    }}
+                    className="absolute -bottom-1 ml-[0.5px] bg-blue-500 w-full h-[2px] rounded-full"
+                    layoutId="red-dot"
+                  />
+                )}
+                <Link href={nav.link} className="font-medium">
+                  {nav.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
         <div className="hidden md:block" />
       </div>
-    </div>
+    </header>
   );
 };
 

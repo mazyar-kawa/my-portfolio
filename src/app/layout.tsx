@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    images: "/opengraph-image.jpg",
+    images: "/opengraph-image.png",
   },
   manifest: "/manifest.json",
 };

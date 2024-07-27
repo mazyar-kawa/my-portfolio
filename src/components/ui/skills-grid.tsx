@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function SkillCards() {
   return (
-    <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-6xl w-full mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-6xl w-full mx-auto">
       {MySkills.map((feature, index) => (
         <Card key={feature.name} {...feature} index={index} />
       ))}
