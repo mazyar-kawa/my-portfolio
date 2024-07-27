@@ -9,9 +9,9 @@ export default function MainLayout({
 }>) {
   return (
     <main className="relative">
-      {/* <Navbar /> */}
+      <Navbar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }
