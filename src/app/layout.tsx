@@ -32,7 +32,12 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    images: "/opengraph-image.jpg",
+    title: "Mazyar Kawa - Full Stack Developer",
+    description:
+      "Welcome to the portfolio of Mazyar Kawa, a dedicated full stack developer.",
+    images: "https://mazyar.dev/opengraph-image.jpg",
+    url: "https://mazyar.dev/",
+    siteName: "Mazyar Kawa",
   },
   manifest: "/manifest.json",
 };
