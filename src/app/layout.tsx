@@ -1,16 +1,16 @@
 import "@/styles/globals.css";
-import { Suspense } from "react";
-import Loading from "./loading";
 import { Metadata, Viewport } from "next";
 
 export const metadata: Metadata = {
   title: "Mazyar Kawa - Full Stack Developer",
   description:
-    "Welcome to the portfolio of Mazyar Kawa, a dedicated frontend developer. Explore my projects showcasing cutting-edge web applications, secure database systems, and advanced cybersecurity solutions. See how I turn creative ideas into digital experiences.",
+    "Welcome to the portfolio of Mazyar Kawa, a dedicated full stack developer. Explore my projects showcasing cutting-edge web applications, secure database systems, and advanced cybersecurity solutions. See how I turn creative ideas into digital experiences.",
   keywords: [
     "Mazyar",
     "Mazyar Kawa",
     "Frontend Developer",
+    "Full Stack Developer",
+    "Mobile Developer",
     "Web Development",
     "Interactive Web Applications",
     "Database Systems",
@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     "Digital Experiences",
     "Best Programmer in kurdistan",
     "Portfolio",
-    "Next js",
     "Next js developer",
   ],
   authors: [
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    images: "/opengraph-image.png",
+    images: "/opengraph-image.jpg",
   },
   manifest: "/manifest.json",
 };
@@ -60,12 +59,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <Suspense fallback={<Loading />}>
-        <body className="bg-black-100 text-white overflow-x-hidden">
-          {children}
-        </body>
-      </Suspense>
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-black-100 text-white overflow-x-hidden">
+        {children}
+      </body>
     </html>
   );
 }

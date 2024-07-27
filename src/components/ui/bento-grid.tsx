@@ -56,9 +56,9 @@ export const BentoGridItem = ({
         />
       </div>
       <div className="group-hover/bento:translate-x-2 transition duration-200">
-        <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-xl text-slate-100">
+        <h1 className="max-w-xs !pb-2 !m-0 font-bold  text-xl text-slate-100">
           {title}
-        </h3>
+        </h1>
         <p className="text-slate-500 text-sm">{description}</p>
       </div>
       <div className="flex flex-row items-center mt-2">

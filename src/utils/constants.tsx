@@ -165,6 +165,12 @@ export const MySkills = [
     description:
       "A Java-based framework used to create stand-alone, production-grade Spring-based applications.",
   },
+  {
+    image: "/lens-creator.svg",
+    name: "Lens Creator",
+    description:
+      "A tool for designing and deploying custom AR lenses and filters on Snapchat, making it easy to create interactive and immersive experiences.",
+  },
 ];
 
 export const MyContact = [
