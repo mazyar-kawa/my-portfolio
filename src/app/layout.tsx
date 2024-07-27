@@ -25,9 +25,7 @@ export const metadata: Metadata = {
       name: "Mazyar Kawa",
     },
   ],
-  metadataBase: new URL(
-    (process.env.ORIGIN as string) || "http://localhost:3000/"
-  ),
+  metadataBase: new URL("https://mazyar.dev"),
   alternates: {
     canonical: "/",
   },
@@ -35,7 +33,7 @@ export const metadata: Metadata = {
     title: "Mazyar Kawa - Full Stack Developer",
     description:
       "Welcome to the portfolio of Mazyar Kawa, a dedicated full stack developer.",
-    images: "https://mazyar.dev/opengraph-image.jpg",
+    images: ["https://mazyar.dev/opengraph-image.jpg"],
     url: "https://mazyar.dev/",
     siteName: "Mazyar Kawa",
   },
