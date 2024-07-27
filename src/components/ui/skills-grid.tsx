@@ -41,6 +41,7 @@ const Card = ({
             src={image}
             height={400}
             width={400}
+            loading="lazy"
             className="size-6 mr-2"
           />
         </div>

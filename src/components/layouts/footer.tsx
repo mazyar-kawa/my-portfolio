@@ -3,18 +3,18 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-slate-800  px-4 py-4 mx-auto  backdrop-blur-md">
-      <div className="flex justify-between container md:flex-row flex-col items-start sm:items-center max-w-5xl mx-auto gap-4 sm:gap-0">
+    <footer className="border-t border-slate-800  px-4 py-4 mx-auto">
+      <div className="flex justify-between container flex-row items-center  max-w-5xl mx-auto gap-4 sm:gap-0">
         <div className="flex gap-4 items-center">
           <a href="/">
-            <h1 className="text-lg sm:text-4xl font-extrabold">
+            <h1 className="text-base sm:text-4xl font-extrabold">
               <span className="text-blue-500 transform rotate-12 inline-block">
                 M
               </span>
               k
             </h1>
           </a>
-          <p>© 2024 All rights reserved.</p>
+          <p className="text-sm">© 2024 All rights reserved.</p>
         </div>
         <div className="flex gap-2 md:flex-row">
           {MyContact.map((contact) => (
