@@ -21,6 +21,8 @@ const menuVariants = {
   exit: { opacity: 0 },
 };
 
+const hashList = menuItems.map((item) => item.link);
+
 const Navbar = () => {
   const pathName = usePathname();
   const [isActive, setIsActive] = useState(false);
@@ -29,7 +31,9 @@ const Navbar = () => {
 
   const handleHashChange = useCallback(() => {
     const hash = window.location.hash;
-    setActiveLink(hash || "#home");
+    if (hashList.includes(hash)) {
+      setActiveLink(hash || "#home");
+    }
 
     // Scroll to the correct section if activeLink is different from hash
     if (hash && hash !== activeLink) {
@@ -71,9 +75,9 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="absolute pr-6 pl-2 rounded-md bg-black-100 border border-white py-1 top-14 right-8 md:hidden"
+            className="absolute pr-10 pl-2 rounded-md bg-black-100 border border-white py-1 top-14 right-8 md:hidden"
           >
-            <ul className="flex flex-col items-start space-y-2">
+            <ul className="flex flex-col items-start space-y-3">
               {menuItems.map((nav) => (
                 <li key={nav.link} onClick={() => setActiveLink(nav.link)}>
                   <Link
