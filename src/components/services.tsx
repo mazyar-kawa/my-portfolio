@@ -7,7 +7,7 @@ import Card from "./ui/service-card";
 const Services = () => {
   return (
     <div
-      className="flex flex-col items-center container py-5 gap-6 relative"
+      className="flex flex-col scroll-m-10 items-center container py-5 gap-6 relative"
       id="services"
     >
       <h1 className="md:text-5xl text-3xl text-blue-500 font-extrabold">

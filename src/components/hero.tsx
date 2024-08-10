@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { BackgroundBeams } from "./ui/background-beams";
-import { CvButton } from "./ui/cv-button";
+import { ShimmerButton } from "./ui/cv-button";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import { cn } from "@/utils/cn";
 
 const Hero = () => {
   return (
@@ -30,7 +29,7 @@ const Hero = () => {
             to see how I transform ideas into digital realities.
           </p>
           <a href="/mazyar-cv.pdf" download>
-            <CvButton title="Download my CV" />
+            <ShimmerButton title="Download my CV" />
           </a>
         </div>
         <div className="sm:px-5 place-self-end">

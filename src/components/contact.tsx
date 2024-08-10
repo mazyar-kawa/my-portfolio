@@ -3,7 +3,7 @@ import { IconBrandTinder } from "@tabler/icons-react";
 
 const Contact = () => {
   return (
-    <div className="relative" id="contact">
+    <div className="relative scroll-m-10" id="contact">
       <div className="flex flex-col gap-4 max-w-5xl container items-center">
         <h1 className="text-3xl md:text-5xl text-blue-500 font-bold text-center">
           Professional Profile
