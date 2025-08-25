@@ -1,17 +1,17 @@
-import Contact from "@/components/contact";
-import Hero from "@/components/hero";
-import MySkils from "@/components/my-skills";
-import Projects from "@/components/projects";
-import Services from "@/components/services";
+import Contact from '@/components/contact'
+import Hero from '@/components/hero'
+import MySkils from '@/components/my-skills'
+import Projects from '@/components/projects'
+import Services from '@/components/services'
 
 export default function Home() {
   return (
-    <div>
+    <main className='overflow-x-hidden'>
       <Hero />
-      <Projects />
+      {/* <Projects />
       <Services />
       <MySkils />
-      <Contact />
-    </div>
-  );
+      <Contact /> */}
+    </main>
+  )
 }
